@@ -7,9 +7,9 @@ var twoSum = function(nums, target) {
 
       return [vals[target-nums[i]], i];
         }
-       else {
-   vals[nums[i]] = i;
-     }
+      else {
+  vals[nums[i]] = i;
+    }
   }
- return [];
+return [];
 };
