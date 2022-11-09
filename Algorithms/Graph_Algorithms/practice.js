@@ -1,14 +1,24 @@
 //adjacency list
+
+//iterative
+// const depthFirstPrint = (graph, source) => {
+//   const stack = [source];
+//   //use push, pop
+
+//   while (stack.length > 0) {
+//     const current = stack.pop();
+//     console.log(current);
+//     for (let neighbor of graph[current]) {
+//       stack.push(neighbor);
+//     }
+//   }
+// };
+
+//recursive
 const depthFirstPrint = (graph, source) => {
-  const stack = [source];
-  //use push, pop
-  
-  while (stack.length > 0) {
-    const current = stack.pop();
-    console.log(current);
-    for (let neighbor of graph[current]) {
-      stack.push(neighbor);
-    }
+  console.log(source);
+  for (let neighbor of graph[source]) {
+    depthFirstPrint(graph, neighbor);
   }
 };
 
